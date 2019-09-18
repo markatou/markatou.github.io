@@ -1,0 +1,360 @@
+/*
+Author: Andrew Spielberg
+h/t to whom this css was based off of: Felix Hornung http://www.fhornung.net
+*/
+
+/* --------------------------------------------------------------------------------------- RESET
+*/
+
+/* Global reset */
+/* Based upon 'reset.css' in the Yahoo! User Interface Library: http://developer.yahoo.com/yui */
+*, html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, label, fieldset, input, p, blockquote, th, td { margin:0; padding:0 }
+table { border-collapse:collapse; border-spacing:0 }
+fieldset, img { border:0 }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal }
+ol, ul, li { list-style:none }
+caption, th { text-align:left }
+h1, h2, h3, h4, h5, h6 { font-size:100%; font-weight:normal }
+q:before, q:after { content:''}
+/* Global reset-RESET */
+/* The below restores some sensible defaults */
+strong {font-weight:bold }
+em {font-style:italic }
+a img {border:none } /* Gets rid of IE's blue borders */
+
+/* --------------------------------------------------------------------------------------- Global
+*/
+@font-face {
+font-family: Helvetica-Neue-Knockoff;
+src: url("fonts/Helvetica_Neue/texgyreheros-regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: Grotesk-Knockoff;
+src: url("fonts/Grotesk/Roboto-Regular.ttf") format("truetype");
+}
+
+
+html {
+  background-color:#000;
+  /*font-family:"NeueHaasGroteskText W01",Helvetica,Arial,sans-serif;*/
+  font-family:Grotesk-Knockoff, Arial, Helvetica, sans-serif;
+  font-size:13px;
+  color:#eee
+  }
+  
+
+.clearThis {
+  clear:left;
+  float:none;
+  height:0;
+  line-height: 0.0em;
+  background-color:#000;
+}
+
+a {
+  text-decoration:none;
+  border:none;
+  outline:none;
+  color:#29AB87;
+  font-weight:bold;
+  }
+a:hover {color:#669900;}
+  
+#centerwrap {
+  width:960px;
+  margin:0 auto;
+  min-height:100%; height:auto !important; height:100%;
+}
+  
+
+/* --------------------------------------------------------------------------------------- Navibox 
+*/
+
+#navibox{
+  position:fixed;
+  top:40px;
+  height:600px;
+  width:240px;
+  background-color:#222222;
+  } 
+  
+
+  
+#photo {
+  background:url(images/bg-top.png) no-repeat;
+  position:fixed; left:1480px; top:88px;
+  width:640px; min-height:500px;
+  padding: 30px 0 100px;
+  margin-bottom: 150px;
+  }
+  
+  
+
+h1#logo a{
+  background-color: #000;
+  text-indent:-9999px;
+  display:block;
+  height:110px;
+  width:240px;
+  margin:30px 0;
+  } 
+
+/*#navibox ul{background:url(images/bg-navmain.gif) no-repeat;}*/
+#navibox ul li a{
+  padding-left:50px;
+  font: normal 17px/30px "Grotesk-Knockoff",Helvetica,Arial,sans-serif;
+  text-decoration:none;
+  color:#eee;
+  }
+#navibox ul li a:hover{color:#29AB87;}  
+
+#navibox h1{
+  padding-top: 100px;
+}
+
+#naviboxSearch {width:210px; padding:30px 0 0 30px;}
+#naviboxSearch form label {display:none;}
+#naviboxSearch input{width:110px;}
+
+#searchsubmit {
+  border:none;
+  background:url(images/btn-search.gif);
+  padding:1px 5px 5px;
+  color:#000;
+  height:24px;
+  width:59px !important;
+  }
+#searchsubmit:hover {background:url(images/btn-search.gif) 0 -30px;}
+
+#cse-search-results iframe {width:580px !important;}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------ Content 
+*/
+  
+#contentbox {
+  background-color:#222222;
+  position:relative; left:320px; top:88px;
+  width:640px; min-height:500px;
+  padding: 30px 0 100px;
+  margin-bottom: 150px;
+  }
+
+#content{
+  min-height: 160px;
+  padding:0 30px 50px; 
+  background-color:#222222;
+  }
+
+.columnRight,
+.columnLeft {width:260px; float:left;}
+.columnLeft {margin-right:40px;}
+
+
+#contentbox h2 {
+  display:block;
+  width:580px;
+  margin-bottom:30px;
+  padding:0 30px 25px;
+  text-decoration:none;
+  color:#eee;
+  font-size:35px;
+  font-weight:normal;
+  }
+#contentbox h2.h2small {font-size:24px; padding-top:10px;}  
+  
+#contentbox h3 {
+  margin:30px 0 10px 0;
+  text-decoration:none;
+  font-size:21px;
+  font-weight:normal;
+  padding-left:10px;
+  padding-top: 100px;
+  padding-bottom:14px;
+  }
+    
+#contentbox h4 {
+  margin-bottom:9px;
+  text-decoration:none;
+  font-size:15px;
+  font-weight:bold;
+  }
+  
+hr{
+  height: 1px;
+  color: #eee;
+  background-color: #eee;
+  border: none;
+  margin:20px 0;
+  } 
+  
+#contentbox p {
+  font-size:13px;
+  line-height:18px;
+  margin-bottom:18px;
+  /*font-family:"NHG", "Helvetica Neue", Helvetica, Arial, sans-serif*/
+  font: normal 17px/30px Helvetica-Neue-Knockoff, "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-family: Helvetica, Arial, sans-serif
+  color:#eee
+  }
+
+
+dl.definitionlist dt {float:left; font-weight:bold;}
+dl.definitionlist dd {float:none; padding-bottom:5px; margin-left:100px;}
+
+dl.newslist dt {float:left; font-size: 11px; font-weight:bold; padding: 7px 0 3px;}
+dl.newslist dd {float:none; padding: 5px 0; margin-left:80px; border-bottom: 1px solid #CCCCCC;}
+
+.googlemap{
+  width:258px;
+  height:500px;
+  float:right;
+  display:block;
+  border:1px solid #CCC;
+  }
+
+
+ul.linklist li{
+  border-bottom:1px solid #ccc;
+  font-size:13px;
+  background-position: 0px 4px;
+  line-height:18px;
+  }
+  
+ul.linklist li a{line-height:18px !important;}
+
+
+ul.bullets li {
+  background: url(images/li.gif) no-repeat scroll 0 5px transparent;
+  padding:0 0 5px 15px;
+  }
+
+
+
+
+.small {
+  font-size:11px;
+  line-height:12px;}
+
+
+/******************** Accordeon 
+*/
+h3.acc_trigger {
+  padding: 0; margin: 20px 0 5px 0 !important;
+  background: url(images/h2_trigger_a.gif) no-repeat;
+  height: 46px; line-height: 46px;
+  width: 580px;
+  font-weight: normal;
+  float: left;
+}
+h3.acc_trigger a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0 0 0 50px;
+  font-weight: normal;
+  font-size:17px !Important;
+}
+h3.acc_trigger a:hover {color: #669900;}
+h3.active {background-position: left bottom;}
+
+.acc_container {
+  margin: 0 0 5px; padding: 0;
+  overflow: hidden;
+  width: 580px;
+  clear: both;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.acc_container .block {padding: 20px 0;}
+
+
+/******************** Publications 
+*/
+
+.floatleft {float:left;}
+.imageleft {float:left; margin:0 30px 10px 0;}  
+.imageright {float:right; margin:0 0 10px 30px;}
+
+div.alignSmall {padding-left:130px;}
+div.alignBig {padding-left:190px;}
+
+
+div.teaser-info{
+  margin-bottom:9px;
+  font-size:11px;
+  }
+  
+div.teaser-links a{
+  margin-right:15px;
+  font-size:11px;
+  float:left;
+  }
+  
+.icononly {
+  height:16px;
+  width:16px;
+  display:block;
+  padding:1px !important;
+  margin:0 0 0 10px !important;
+  text-indent:-99999px; 
+  }
+  
+  
+img.project-img {margin-bottom:15px;}
+
+a.lightview {
+  margin: 0!important;
+  padding: 0!important;
+  }
+
+a.lightview img {
+  margin: 4px!important;
+  }
+  
+div.bibtex { font-size:10pt; font-family:"Computer Modern Roman"; font-weight:normal; color:#000000; text-decoration:none; }
+div.code { font-size:09pt; font-family:"Computer Modern Roman"; font-weight:normal; color:#000000; text-decoration:none; }
+
+
+#contentbox div.figure {
+display: block;
+}
+
+#contentbox p.figure_caption {
+font-size: 11px;
+font-style: italic;
+line-height: 15px;
+margin: 10px 0 30px;
+}
+
+
+/******************** last Modified
+*/
+
+.lastModified {
+  color:#666;
+  width: 580px;
+  font-size: 10px;
+  padding: 30px;
+  position:absolute;
+  /*background:url(images/bg-bottom.png) bottom no-repeat;*/
+  }
+
+.lastModified hr {margin: 2px auto;}
+  
+pre{
+  background-color: #c3e0f0;
+  overflow: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  border: 1px solid #999;
+}
